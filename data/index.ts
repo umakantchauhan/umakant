@@ -92,6 +92,7 @@ export const projects = [
     img: "/p1.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/MongoDB.svg"],
     link: "https://hiremind-umakant.vercel.app/",
+    check: "Check Live",
   },
   {
     id: 2,
@@ -100,6 +101,7 @@ export const projects = [
     img: "/p2.webp",
     iconLists: ["/Node.svg", "/MongoDB.svg"],
     link: "https://github.com/umakantchauhan/Wanderlust.git",
+    check: "Check",
   },
   {
     id: 3,
@@ -108,6 +110,7 @@ export const projects = [
     img: "/p3.webp",
     iconLists: ["/python.svg", "/ts.svg", "/MongoDB.svg"],
     link: "https://github.com/umakantchauhan/Accident-Detection-System.git",
+    check: "Check",
   },
   {
     id: 4,
@@ -116,6 +119,7 @@ export const projects = [
     img: "/p4.webp",
     iconLists: ["/python.svg"],
     link: "https://github.com/umakantchauhan/Elsa-Voice-assistance-.git",
+    check: "Check",
   },
 
   // {

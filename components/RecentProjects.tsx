@@ -85,7 +85,7 @@ const RecentProjects = () => {
                     rel="noopener noreferrer"
                     className="flex lg:text-xl md:text-xs text-sm text-purple hover:text-purple/80 transition-colors"
                   >
-                    Check
+                    {item.check}
                     <FaLocationArrow className="ms-3" color="#CBACF9" />
                   </a>
                 </div>
