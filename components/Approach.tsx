@@ -12,7 +12,7 @@ const Approach = () => {
         My <span className="text-purple">approach</span>
       </h2>
 
-      <div className="my-20 flex w-full flex-col items-center justify-center gap-4 lg:flex-row">
+      <div className="my-20 flex w-full flex-col items-center justify-center gap-4 md:flex-row">
         <Card
           title="Planning & Strategy"
           icon={<AceternityIcon order="Phase 1" />}
@@ -68,25 +68,43 @@ interface CardProps {
 const Card = ({ title, icon, children, des }: CardProps) => {
   const [hovered, setHovered] = useState(false);
 
+  const handleCardToggle = () => {
+    if (typeof window !== "undefined" && window.innerWidth < 768) {
+      setHovered((prev) => !prev);
+    }
+  };
+
   return (
     <div
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
+      onClick={handleCardToggle}
+      onKeyDown={(event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          handleCardToggle();
+        }
+      }}
+      role="button"
+      tabIndex={0}
       className="
         group/canvas-card
         relative
         mx-auto
         flex
-        h-[35rem]
+        h-[24rem]
         w-full
-        max-w-sm
+        max-w-[min(22rem,90vw)]
         items-center
         justify-center
+        overflow-hidden
         rounded-3xl
         border
         border-white/[0.1]
         p-4
-        overflow-hidden
+        sm:h-[28rem]
+        md:h-[35rem]
+        md:max-w-sm
       "
       style={{
         background:
@@ -123,7 +141,7 @@ const Card = ({ title, icon, children, des }: CardProps) => {
             left-1/2
             top-1/2
             flex
-            min-w-40
+            min-w-28
             -translate-x-1/2
             -translate-y-1/2
             items-center
@@ -133,7 +151,15 @@ const Card = ({ title, icon, children, des }: CardProps) => {
             duration-200
             group-hover/canvas-card:-translate-y-4
             group-hover/canvas-card:opacity-0
+            sm:min-w-32
+            md:min-w-40
           "
+          style={{
+            transform: hovered
+              ? "translateX(-50%) translateY(calc(-50% - 1rem))"
+              : undefined,
+            opacity: hovered ? 0 : undefined,
+          }}
         >
           {icon}
         </div>
@@ -154,6 +180,10 @@ const Card = ({ title, icon, children, des }: CardProps) => {
             group-hover/canvas-card:-translate-y-2
             group-hover/canvas-card:opacity-100
           "
+          style={{
+            opacity: hovered ? 1 : undefined,
+            transform: hovered ? "translateY(-0.5rem)" : undefined,
+          }}
         >
           {title}
         </h3>
@@ -173,6 +203,10 @@ const Card = ({ title, icon, children, des }: CardProps) => {
             group-hover/canvas-card:-translate-y-2
             group-hover/canvas-card:opacity-100
           "
+          style={{
+            opacity: hovered ? 1 : undefined,
+            transform: hovered ? "translateY(-0.5rem)" : undefined,
+          }}
         >
           {des}
         </p>

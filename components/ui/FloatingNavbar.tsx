@@ -67,19 +67,25 @@ export const FloatingNav = ({ navItems, className }: FloatingNavProps) => {
           z-[5000]
           mx-auto
           flex
-          w-fit
+          w-[calc(100vw-1.25rem)]
           max-w-[calc(100vw-2rem)]
+          flex-wrap
           items-center
           justify-center
-          gap-4
-          rounded-xl
+          gap-2
+          rounded-[999px]
           border
           border-white/[0.125]
           bg-black-200
-          px-6
-          py-4
+          px-3
+          py-3
+          text-center
           shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]
           backdrop-blur-xl
+          sm:w-fit
+          sm:gap-4
+          sm:px-6
+          sm:py-4
           md:gap-6
           md:px-10
           md:py-5
@@ -97,11 +103,12 @@ export const FloatingNav = ({ navItems, className }: FloatingNavProps) => {
               items-center
               gap-1.5
               whitespace-nowrap
-              text-sm
+              text-[11px]
               text-white-100
               transition-colors
               duration-200
               hover:text-white
+              sm:text-sm
             "
           >
             {navItem.icon && <span className="sm:hidden">{navItem.icon}</span>}

@@ -15,7 +15,10 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Umakant Chauhan",
-  description: "modern and minimalist protfolio",
+  description: "Full Stack Developer & AI Engineer",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

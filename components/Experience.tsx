@@ -62,7 +62,7 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 const Experience = () => {
   return (
-    <section className="w-full py-20">
+    <section className="w-full py-20" id="experience">
       <h1 className="heading">
         My <span className="text-purple">work experience</span>
       </h1>
@@ -78,8 +78,7 @@ const Experience = () => {
                 "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
               borderRadius: "1.68rem",
             }}
-            containerClassName={`min-h-[220px] ${card.className || ""
-              }`}
+            containerClassName={`min-h-[220px] ${card.className || ""}`}
             className="w-full border-neutral-200 text-white dark:border-slate-800"
           >
             <div className="flex w-full flex-col items-center gap-5 p-5 md:p-8 lg:flex-row lg:p-10">
