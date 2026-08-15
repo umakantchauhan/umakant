@@ -24,7 +24,7 @@ const RecentProjects = () => {
                   style={{ backgroundColor: "#13162D" }}
                 >
                   <img
-                    src="/bg.png"
+                    src="/bg.webp"
                     alt="bgimg"
                     className="w-full h-full object-cover"
                   />
