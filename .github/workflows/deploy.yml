@@ -19,7 +19,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      NEXT_PUBLIC_BASE_PATH: "/umakantchauhan.com"
+      NEXT_PUBLIC_BASE_PATH: "/umakant"
 
     steps:
       - name: Checkout
