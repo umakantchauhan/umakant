@@ -58,6 +58,8 @@
 import { workExperience } from "@/data";
 import { Button } from "./ui/MovingBorders";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 const Experience = () => {
   return (
     <section className="w-full py-20">
@@ -82,7 +84,7 @@ const Experience = () => {
           >
             <div className="flex w-full flex-col items-center gap-5 p-5 md:p-8 lg:flex-row lg:p-10">
               <img
-                src={card.thumbnail}
+                src={`${basePath}${card.thumbnail}`}
                 alt={card.title}
                 className="h-auto w-20 shrink-0 md:w-24 lg:w-28"
               />

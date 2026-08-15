@@ -11,6 +11,8 @@ import GridGlobe from "./GridGlobe";
 import animationData from "@/data/confetti.json";
 import MagicButton from "../MagicButton";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 interface BentoGridProps {
   className?: string;
   children?: React.ReactNode;
@@ -100,7 +102,7 @@ export const BentoGridItem = ({
         <div className="absolute inset-0 h-full w-full">
           {img && (
             <img
-              src={img}
+              src={`${basePath}${img}`}
               alt=""
               className={cn(
                 "h-full w-full object-cover object-center",
@@ -119,7 +121,7 @@ export const BentoGridItem = ({
         >
           {spareImg && (
             <img
-              src={spareImg}
+              src={`${basePath}${spareImg}`}
               alt=""
               className="h-full w-full object-cover object-center"
             />

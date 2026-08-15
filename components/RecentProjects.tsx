@@ -5,6 +5,8 @@ import { FaLocationArrow } from "react-icons/fa6";
 import { projects } from "@/data";
 import { PinContainer } from "./ui/Pin";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 const RecentProjects = () => {
   return (
     <div className="py-20" id="projects">
@@ -24,7 +26,7 @@ const RecentProjects = () => {
                   style={{ backgroundColor: "#13162D" }}
                 >
                   <img
-                    src="/bg.webp"
+                    src={`${basePath}/bg.webp`}
                     alt="bgimg"
                     className="w-full h-full object-cover"
                   />
@@ -36,7 +38,7 @@ const RecentProjects = () => {
                   className="absolute bottom-0 z-10"
                 >
                   <img
-                    src={item.img}
+                    src={`${basePath}${item.img}`}
                     alt={item.title}
                     className="max-h-full w-auto object-contain"
                   />
@@ -68,7 +70,7 @@ const RecentProjects = () => {
                       }}
                     >
                       <img
-                        src={icon}
+                        src={`${basePath}${icon}`}
                         alt="icon"
                         className="p-2 w-full h-full object-contain"
                       />
