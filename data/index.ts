@@ -89,9 +89,9 @@ export const projects = [
     id: 1,
     title: "HireMind",
     des: "HireMind is an AI-powered recruitment and ATS platform that streamlines candidate screening and evaluation using Gemini AI. It provides automated resume parsing, candidate skill assessment, and identity validation to help recruiters make faster, data-driven hiring decisions.",
-    img: "/p1.webp",
+    img: "/p1.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/MongoDB.svg"],
-    link: "https://github.com/umakantchauhan/HireMind-1.git",
+    link: "https://hiremind-umakant.vercel.app/",
   },
   {
     id: 2,
